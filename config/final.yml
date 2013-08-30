@@ -1,0 +1,7 @@
+---
+final_name: dummy
+blobstore:
+  provider: local
+  options:
+    blobstore_path: /tmp/
+min_cli_version: 1.5.0.pre.891
