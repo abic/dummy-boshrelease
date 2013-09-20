@@ -1,0 +1,7 @@
+---
+name: dummy_package
+
+dependencies: []
+
+files:
+- dummy_package_file

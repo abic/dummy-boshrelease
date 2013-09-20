@@ -1,0 +1,5 @@
+check process dummy_with_package
+  with pidfile /var/vcap/sys/run/dummy_with_package/dummy_with_package.pid
+  start program "/var/vcap/jobs/dummy_with_package/bin/dummy_with_package_ctl start"
+  stop program "/var/vcap/jobs/dummy_with_package/bin/dummy_with_package_ctl stop"
+  group vcap

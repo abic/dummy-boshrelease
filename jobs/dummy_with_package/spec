@@ -1,0 +1,7 @@
+---
+name: dummy_with_package
+templates:
+  dummy_with_package_ctl: bin/dummy_with_package_ctl
+
+packages:
+- dummy_package
