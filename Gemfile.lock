@@ -1,5 +1,5 @@
 GIT
-  remote: git@github.com:pivotal-cf-experimental/cf-deployer.git
+  remote: https://github.com/pivotal-cf-experimental/cf-deployer.git
   revision: 657cb51b5d9c53c156d2802374b0589e65454e7d
   specs:
     cf_deployer (0.3.0)
