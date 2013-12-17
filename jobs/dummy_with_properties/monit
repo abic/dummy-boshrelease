@@ -1,0 +1,5 @@
+check process dummy_with_properties
+  with pidfile /var/vcap/sys/run/dummy_with_properties/dummy_with_properties.pid
+  start program "/var/vcap/jobs/dummy_with_properties/bin/dummy_with_properties_ctl start"
+  stop program "/var/vcap/jobs/dummy_with_properties/bin/dummy_with_properties_ctl stop"
+  group vcap
