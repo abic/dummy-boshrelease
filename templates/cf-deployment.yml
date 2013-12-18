@@ -1,0 +1,61 @@
+---
+name: (( merge ))
+
+director_uuid: (( merge ))
+
+releases:
+  - name: dummy
+    version: latest
+
+networks:
+  - name: cf1
+    subnets:
+    - cloud_properties:
+        name: random
+      range: 10.244.0.0/24
+      reserved:
+      - 10.244.0.1
+      static:
+      - 10.244.0.2
+
+jobs:
+  - name: dummy_z1
+    template: dummy
+    instances: 1
+    resource_pool: medium_z1
+    networks:
+      - name: cf1
+        static_ips:
+          - 10.244.0.2
+    properties:
+      network_name: cf1
+
+properties:
+  warden:
+    kernel_network_tuning_enabled: true
+
+meta:
+  stemcell:
+    name: bosh-stemcell
+    version: latest
+
+compilation:
+  workers: 1
+  network: cf1
+  reuse_compilation_vms: true
+  cloud_properties:
+    name: random
+
+update:
+  canaries: 1
+  max_in_flight: 3
+  canary_watch_time: 30000-600000
+  update_watch_time: 5000-600000
+
+resource_pools:
+  - name: medium_z1
+    network: cf1
+    size: (( auto ))
+    stemcell: (( meta.stemcell ))
+    cloud_properties:
+      name: random
