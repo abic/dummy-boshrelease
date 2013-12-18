@@ -1,0 +1,4 @@
+#!/bin/bash
+
+bosh vms | grep -q dummy_z1/0
+exit $?
