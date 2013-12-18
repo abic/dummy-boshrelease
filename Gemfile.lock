@@ -1,6 +1,6 @@
 GIT
   remote: https://github.com/pivotal-cf-experimental/cf-deployer.git
-  revision: c3b43845d822898e7b1a7bc648e94ddc35e1595c
+  revision: 85e002faef61942462f5dd994eb1b2de3e3342c5
   specs:
     cf_deployer (0.3.0)
       bosh_cli (~> 1.5.0.pre.3)
