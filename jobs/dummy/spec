@@ -1,6 +1,6 @@
 ---
 name: dummy
 templates:
-  dummy_ctl: bin/dummy_ctl
+  ctl.erb: bin/dummy_ctl
 
 packages: []
