@@ -1,0 +1,12 @@
+---
+name: dummy_with_drain
+templates:
+  ctl.erb: bin/dummy_with_drain_ctl
+  drain.erb: bin/drain
+
+packages: []
+
+properties:
+  dummy.drain_prop:
+    description: fake property to force job change
+    default: default-property

@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Fake property set to: <%= p('dummy.drain_prop') %>
+
+echo "$(date) drain ran with '$@'" >> /var/vcap/data/drain_log
+
+case $1 in
+job_shutdown)
+  echo 1
+  ;;
+job_check_status)
+  echo 0
+  ;;
+*)
+  echo -1
+  ;;
+esac
