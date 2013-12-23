@@ -1,0 +1,7 @@
+---
+name: dummy_with_bad_package
+templates:
+  ctl.erb: bin/dummy_with_bad_package_ctl
+
+packages:
+- bad_package

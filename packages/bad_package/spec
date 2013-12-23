@@ -1,0 +1,7 @@
+---
+name: bad_package
+
+dependencies: []
+
+files:
+- bad_package_file
