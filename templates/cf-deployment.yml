@@ -36,7 +36,7 @@ properties:
 
 meta:
   stemcell:
-    name: bosh-stemcell
+    name: bosh-warden-boshlite-ubuntu
     version: latest
 
 compilation:
