@@ -1,0 +1,9 @@
+#!/bin/bash
+
+TARGET=192.168.50.4
+USERNAME=admin
+PASSWORD=admin
+
+echo "Checking bosh VMs to see if the dummy job was deployed..."
+
+bosh -t $TARGET -u $USERNAME -p $PASSWORD vms | grep -q dummy_z1/0

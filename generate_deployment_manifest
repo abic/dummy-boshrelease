@@ -1,0 +1,10 @@
+#!/bin/sh
+
+templates=$(dirname $0)/templates
+
+infrastructure=$1
+shift
+
+spiff merge \
+  $templates/cf-deployment.yml \
+  $*
